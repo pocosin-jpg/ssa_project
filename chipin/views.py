@@ -21,8 +21,11 @@ def create_group(request):
         form = GroupCreationForm(request.POST, user=request.user)
         if form.is_valid():
             group = form.save()
+            logger.info(
+                f"User '{request.user.username}' created group '{group.name}'."
+            )  # Log group creation
             messages.success(request, f'Group "{group.name}" created successfully!')
-            return redirect("chipin:group_detail", group_id=group.id)
+            return redirect("group_detail", group_id=group.id)
     else:
         form = GroupCreationForm(user=request.user)
     return render(request, "chipin/create_group.html", {"form": form})
