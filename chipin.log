@@ -695,3 +695,7 @@ Watching for file changes with StatReloader
 "GET /chipin/group/8/invite/ HTTP/1.1" 200 1285
 "POST /users/logout/ HTTP/1.1" 302 0
 "GET /users/login/ HTTP/1.1" 200 1916
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 302 0
+"GET /users/login/?next=/users/ HTTP/1.1" 200 1787
+"GET /static/chipin/styles.css HTTP/1.1" 304 0
