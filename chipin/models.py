@@ -12,6 +12,9 @@ class Group(models.Model):
     members = models.ManyToManyField(
         CustomUser, related_name="group_memberships", blank=True
     )
+    invited_users = models.ManyToManyField(
+        CustomUser, related_name="pending_invitations", blank=True
+    )
 
     def __str__(self):
         return self.name
