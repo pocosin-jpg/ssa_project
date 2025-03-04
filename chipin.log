@@ -359,3 +359,339 @@ Watching for file changes with StatReloader
 "POST /users/login/ HTTP/1.1" 302 0
 "GET /users/ HTTP/1.1" 200 972
 "GET /chipin/ HTTP/1.1" 200 981
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 302 0
+"GET /users/login/?next=/users/ HTTP/1.1" 200 1787
+"GET /static/chipin/styles.css HTTP/1.1" 304 0
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1936
+"GET /users/login/ HTTP/1.1" 200 2021
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 976
+"GET /chipin/ HTTP/1.1" 200 986
+"GET /chipin/create_group/ HTTP/1.1" 200 1281
+Internal Server Error: /chipin/create_group/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 29, in create_group
+    logger.info(
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /chipin/create_group/ HTTP/1.1" 500 70118
+C:\Users\melie\ssa_project\chipin\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\melie\ssa_project\chipin\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\melie\ssa_project\chipin\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /chipin/create_group/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 38, in create_group
+    return redirect("group_detail", group_id=group.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group_detail' not found. 'group_detail' is not a valid view function or pattern name.
+"POST /chipin/create_group/ HTTP/1.1" 500 89432
+"GET /chipin/create_group/ HTTP/1.1" 200 1431
+Internal Server Error: /chipin/create_group/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 38, in create_group
+    return redirect("group_detail", group_id=group.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group_detail' not found. 'group_detail' is not a valid view function or pattern name.
+"POST /chipin/create_group/ HTTP/1.1" 500 89432
+C:\Users\melie\ssa_project\chipin\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /chipin/create_group/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 38, in create_group
+    return redirect("group_detail", group_id=group.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group_detail' not found. 'group_detail' is not a valid view function or pattern name.
+"POST /chipin/create_group/ HTTP/1.1" 500 89702
+Internal Server Error: /chipin/create_group/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 38, in create_group
+    return redirect("group_detail", group_id=group.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group_detail' not found. 'group_detail' is not a valid view function or pattern name.
+"POST /chipin/create_group/ HTTP/1.1" 500 89716
+C:\Users\melie\ssa_project\chipin\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /chipin/create_group/ HTTP/1.1" 302 0
+"GET /chipin/group/6/ HTTP/1.1" 200 1440
+"GET /chipin/group/6/invite/ HTTP/1.1" 200 1289
+Watching for file changes with StatReloader
+"GET /chipin/create_group/ HTTP/1.1" 200 1281
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 976
+"GET /chipin/ HTTP/1.1" 200 2231
+"GET /chipin/group/1/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 2160
+"GET /chipin/group/2/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 1943
+"GET /chipin/group/3/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 1726
+"GET /chipin/group/4/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 1509
+"GET /chipin/group/5/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 1292
+"GET /chipin/group/6/ HTTP/1.1" 200 1014
+"GET /chipin/group/6/invite/ HTTP/1.1" 200 1469
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 959
+"GET /chipin/ HTTP/1.1" 200 977
+"GET /chipin/create_group/ HTTP/1.1" 200 1272
+"POST /chipin/create_group/ HTTP/1.1" 302 0
+"GET /chipin/group/7/ HTTP/1.1" 200 1149
+"GET /chipin/group/7/invite/ HTTP/1.1" 200 1477
+"POST /chipin/group/7/invite/ HTTP/1.1" 302 0
+"GET /chipin/group/7/ HTTP/1.1" 200 1129
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 976
+"GET /chipin/ HTTP/1.1" 200 1459
+Internal Server Error: /chipin/accept-invite/7/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 92, in accept_invite
+    invited_user = get_object_or_404(User, id=user_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: auth_user
+"GET /chipin/accept-invite/7/?user_id=1 HTTP/1.1" 500 143726
+Internal Server Error: /chipin/accept-invite/7/
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\ssa_project\chipin\views.py", line 92, in accept_invite
+    invited_user = get_object_or_404(CustomUser, id=user_id)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\melie\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: auth_user
+"GET /chipin/accept-invite/7/?user_id=1 HTTP/1.1" 500 143875
+C:\Users\melie\ssa_project\chipin\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /chipin/accept-invite/7/?user_id=1 HTTP/1.1" 302 0
+"GET /chipin/group/7/ HTTP/1.1" 200 1211
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 959
+"GET /chipin/ HTTP/1.1" 200 1141
+"GET /chipin/group/7/delete/ HTTP/1.1" 302 0
+"GET /chipin/ HTTP/1.1" 200 1127
+"GET /chipin/create_group/ HTTP/1.1" 200 1272
+"POST /chipin/create_group/ HTTP/1.1" 302 0
+"GET /chipin/group/8/ HTTP/1.1" 200 1131
+"GET /chipin/group/8/invite/ HTTP/1.1" 200 1465
+"GET /chipin/group/8/invite/ HTTP/1.1" 200 1342
+"POST /chipin/group/8/invite/ HTTP/1.1" 302 0
+"GET /chipin/group/8/ HTTP/1.1" 200 1117
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
+"POST /users/login/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 976
+"GET /chipin/ HTTP/1.1" 200 1453
+"GET /chipin/accept-invite/8/?user_id=1 HTTP/1.1" 302 0
+"GET /chipin/group/8/ HTTP/1.1" 200 1193
+"GET /chipin/group/8/invite/ HTTP/1.1" 200 1285
+"POST /users/logout/ HTTP/1.1" 302 0
+"GET /users/login/ HTTP/1.1" 200 1916
