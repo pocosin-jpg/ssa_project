@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Profile
 
+from users.models import CustomUser
+
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -11,7 +13,7 @@ class UserRegistrationForm(UserCreationForm):
     nickname = forms.CharField(max_length=30, required=True)
 
     class Meta:
-        model = User
+        model = CustomUser
         fields = [
             "username",
             "email",

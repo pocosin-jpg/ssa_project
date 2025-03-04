@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from django.contrib.auth.models import AbstractUser
 from cryptography.fernet import Fernet
 
+# from chipin.models import Group
 
 # Generate a key for encryption (store this securely, such as in environment variables)
 key = Fernet.generate_key()
@@ -13,6 +14,7 @@ cipher_suite = Fernet(key)
 
 
 class CustomUser(AbstractUser):
+    # We will only store essential data: email and nickname
     nickname = models.CharField(max_length=30, unique=True)
     email = models.EmailField(unique=True)
     is_profile_public = models.BooleanField(
@@ -28,7 +30,7 @@ class CustomUser(AbstractUser):
         super().save(*args, **kwargs)
 
 
-@receiver(post_save, sender=User)
+@receiver(post_save, sender=CustomUser)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.get_or_create(
@@ -36,7 +38,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         )  # Safely create the profile without duplicating
 
 
-@receiver(post_save, sender=User)
+@receiver(post_save, sender=CustomUser)
 def save_user_profile(sender, instance, **kwargs):
     if hasattr(instance, "profile"):  # Ensure profile exists before trying to save
         instance.profile.save()
@@ -53,7 +55,7 @@ def validate_unique_nickname(nickname, instance=None):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30)
     surname = models.CharField(max_length=30)
     nickname = models.CharField(max_length=30, unique=True, null=False, blank=False)
