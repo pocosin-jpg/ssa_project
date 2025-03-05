@@ -24,4 +24,13 @@ urlpatterns = [
         views.vote_on_join_request,
         name="vote_on_join_request",
     ),
+    path(
+        "group/<int:group_id>/edit/<int:edit_comment_id>/",
+        views.group_detail,
+        name="edit_comment",
+    ),
+    path("comment/<int:comment_id>/edit/", views.edit_comment, name="edit_comment"),
+    path(
+        "comment/<int:comment_id>/delete/", views.delete_comment, name="delete_comment"
+    ),
 ]
